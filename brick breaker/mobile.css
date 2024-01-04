@@ -1,0 +1,49 @@
+@media  screen and (max-width: 500px ) { 
+    .start {
+        width: 400px;
+    }
+
+    .logo span {
+        font-size: 24px;
+        font-weight: 700;
+        gap: 2px;
+        padding: 3px;
+        border: 2px dashed green;
+        border-radius: 3px;
+        /* width: 30px; */
+    }
+    
+    .logo {
+        gap: 5px;
+        left: -10px;
+        /* width: 100px; */
+        margin-left: 15px;
+        
+    }
+
+    .loading h1 {
+        font-size: 18px;
+        transition: none;
+        /* transition: 1s ease-in, ease-out 1s; */
+        /* transition-delay: 2s; */
+        animation: 0.75s boggle linear infinite;
+        animation-delay: 3s;
+        color: transparent;
+    }
+
+    @keyframes boggle {
+        from {
+            font-size: 20px;
+            color: green;
+        }
+    
+        to {
+            color: transparent;
+        }
+    }
+
+    .start {
+        width: 100%;
+    }
+}
+

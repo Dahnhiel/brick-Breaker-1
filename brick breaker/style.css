@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #101010;
+    color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    position: relative;
+    /* margin-top: 50%; */
+    gap: 10px;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+}
+
+div {
+    display: flex;
+}
+
+.logo span {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    /* background-color: green; */
+    border: 3px dashed green;
+    display: flex;
+    gap: 10px;
+    padding: 2px;
+    display: block;
+    /* margin-top: 10%; */
+    width: 100%;
+}
+
+.loader {
+    width: 200px;
+    height: 25px;
+    /* background-color: white; */
+    border: 2px dashed green;
+    display: block;
+    border-radius: 10px;
+    display: flex;
+    /* place-content: center; */
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    /* transform: skewx(0deg); */
+    /* transition: width 2s ease-in-out, height 5s linear; */
+} 
+
+/* .loader:hover{
+    width: 500px;
+    height: 100px;
+    content: "please wait";
+} */
+
+.loading {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.loader::after {
+    /* content: 'loading'; */
+    position: relative;
+    z-index: 5;
+}
+
+.loader:before {
+    content: '';
+    height: 10px;
+    /* border: 1px solid; */
+    border-radius: 10px;
+    width: 180px;
+    position: absolute;
+    /* bottom: 0px; */
+    background: linear-gradient(green 100%, transparent 0) no-repeat;
+    background-size: 0% auto;
+    animation: 2s lineGrow linear forwards;
+    /* transform: rotateX(150deg); */
+}
+
+@keyframes lineGrow {
+    to{
+        background-size: 100% auto;
+    }
+}
+
+.loading h1 {
+   text-emphasis: 1px dashed green;
+   color: green;
+   /* font-size: 18px; */
+   font-style: italic;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   transition: ease-in 4s, ease-out 1s;
+   transition-delay: 2.2s;
+   animation: 1s boggle infinite;
+   animation-delay: 3s;
+}
+
+
+@keyframes boggle {
+    50% {
+        font-size: 20px;
+        color: green;
+    }
+
+    70% {
+        color: transparent;
+    }
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    /* place-content: center; */
+    align-items: center;
+    justify-content: center;
+}
+
+.start {
+    border: 2px dashed green;
+    padding: 20px;
+    /* margin-top: 7%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1000px;
+    height: 100vh;
+}
+
+/* second page styling */
+
+.game-start-page {
+    background-color: #101010;
+    width: 500px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: 4s;
+}
+
+
+
+button {
+    /* cursor: not-allowed; */
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 24px;
+    background: transparent;
+    color: green;
+    border: 1px dashed green;
+    /* transition: 2s; */
+
+    animation: 2s btn forwards;
+}
+
+button:hover {
+    border: 1px solid green;
+    transition: 2s ease-in, 2s ease-out;
+}
+
+@keyframes btn {
+    from {
+        background: green;
+        color: #101010;
+    }
+
+    to {
+        background: transparent;
+        color: green;
+    }
+}
